@@ -37,6 +37,36 @@ export var findMode = function (root) {
     return res.sort((a, b) => a - b)
 };
 
+function findMode2(root) {
+    console.log(root)
+    const map = new Map();
+    let maxCount = 0;
+    const modes = [];
+
+
+    function inOrder(node) {
+        if (node) {
+            inOrder(node.left);
+            const count = (map.get(node.val) || 0) + 1;
+            map.set(node.val, count);
+            maxCount = Math.max(maxCount, count);
+
+            inOrder(node.right);
+        }
+    }
+
+    inOrder(root);
+
+    for (const [key, value] of map) {
+        if (value === maxCount) {
+            modes.push(key);
+        }
+    }
+
+    return modes;
+}
+
+
 // 創建測試用的二叉搜索樹
 const root1 = new TreeNode(1);
 root1.right = new TreeNode(2);
