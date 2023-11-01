@@ -6,7 +6,11 @@
   "scripts": {
     "test": "vitest"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^0.34.6"
+  }
 }
