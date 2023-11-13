@@ -1,6 +1,6 @@
 # Leecode
 
-紀錄已完成的題目
+紀錄已完成的題目!!
 
 https://leetcode.com/imall/
 
